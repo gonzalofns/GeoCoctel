@@ -3,6 +3,8 @@ package com.example.demo.pojos;
 import java.util.List;
 import java.util.Set;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +19,7 @@ import lombok.ToString;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 
-
+@Document(collection = "cocteles")
 public class Coctel {
 
 	private String id;
@@ -26,4 +28,5 @@ public class Coctel {
 	private List<String> pasos;
 	private Usuario creador;
 	private Set<Ingrediente> ingredientes;
+	
 }

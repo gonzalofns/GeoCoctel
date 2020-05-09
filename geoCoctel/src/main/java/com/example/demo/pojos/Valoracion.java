@@ -1,5 +1,7 @@
 package com.example.demo.pojos;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +16,7 @@ import lombok.ToString;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 
+@Document(collection = "valoraciones")
 public class Valoracion {
 
 	private String id;

@@ -2,6 +2,8 @@ package com.example.demo.pojos;
 
 import java.util.Set;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,6 +18,7 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 
+@Document(collection = "usuarios")
 public class Cocteleria extends Usuario {
 	
 	private String tipo;

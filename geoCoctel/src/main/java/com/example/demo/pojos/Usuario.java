@@ -3,6 +3,8 @@ package com.example.demo.pojos;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,6 +19,7 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
 
+@Document(collection = "usuarios")
 public class Usuario {
 
 	private String id;
